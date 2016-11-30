@@ -295,12 +295,7 @@
 									</thead>
 									<tbody>
 										<tr>
-											<td>Per Each Technical Event</td>
-											<td><i class="fa fa-inr" aria-hidden="true">50</i>
-											</td>
-										</tr>
-										<tr>
-											<td>Per Each Fun Event</td>
+											<td>For Each Individual Event</td>
 											<td><i class="fa fa-inr" aria-hidden="true">50</i>
 											</td>
 										</tr>
