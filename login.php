@@ -3,9 +3,25 @@
 	if(isset($_POST["username"])){
 		$db = new mysqli('sql202.rf.gd','rfgd_19176149','nihanth007','rfgd_19176149_registrations');
 		$username = $_POST["username"];
+		$password = $_POST["password"];
 		$sql = 'select * from entry where pin="'.$username.'"';
 		if($result = $db->query($sql)){
 			$temp = $result->fetch_row();
+			if($temp[3] == $password){
+				$login=true;
+				session_start();
+				$_SESSION["name"]=$temp[0];
+				$_SESSION["pin"]=$temp[1];
+				$_SESSION["email"]=$temp[2];
+				$_SESSION["phone"]=$temp[3];
+				$_SESSION["college"]=$temp[4];
+				$_SESSION["branch"]=$temp[5];
+				echo '<script>window.location.href="mypage.php";</script>';
+			}
+			else{
+				$login = false;
+				echo "Invalid";
+			}
 			
 		}
 		else{
@@ -57,7 +73,7 @@
 	</style>
 </head>
 
-<body onLoad="modal()">
+<body>
 	<div style="z-index:-1;" id="particles-js"></div>
 	<a href="#cd-nav" class="cd-nav-trigger">
         Menu<span></span>
@@ -75,7 +91,7 @@
 		</header>
 		<ul class="cd-nav">
 			<li data-menu="index">
-				<a href="index.html" onclick="window.location.href = 'index.html';">
+				<a href="index.php" onclick="window.location.href = 'index.php';">
                     <span>
                         <svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64"><g transform="translate(0, 0)"> <polyline data-cap="butt" fill="none" stroke="#9e85d0" stroke-width="2" stroke-miterlimit="10" points="10,24.9 10,60 26,60 26,44 38,44 38,60 54,60 54,24.9 " stroke-linejoin="square" stroke-linecap="butt"></polyline> <polyline data-color="color-2" fill="none" stroke="#9e85d0" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points=" 4,30 32,6 60,30 " stroke-linejoin="square"></polyline> <rect data-color="color-2" x="26" y="24" fill="none" stroke="#9e85d0" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="12" height="10" stroke-linejoin="square"></rect> </g></svg>
                     </span>

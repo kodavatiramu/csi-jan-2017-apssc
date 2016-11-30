@@ -1,4 +1,4 @@
-﻿b<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -58,7 +58,7 @@
         </header>
         <ul class="cd-nav">
             <li class="cd-selected" data-menu="index">
-                <a href="index.html" onclick="window.location.href = 'index.html';">
+                <a href="index.html" onclick="window.location.href = 'index.php';">
                     <span>
                         <svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64"><g transform="translate(0, 0)"> <polyline data-cap="butt" fill="none" stroke="#9e85d0" stroke-width="2" stroke-miterlimit="10" points="10,24.9 10,60 26,60 26,44 38,44 38,60 54,60 54,24.9 " stroke-linejoin="square" stroke-linecap="butt"></polyline> <polyline data-color="color-2" fill="none" stroke="#9e85d0" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points=" 4,30 32,6 60,30 " stroke-linejoin="square"></polyline> <rect data-color="color-2" x="26" y="24" fill="none" stroke="#9e85d0" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" width="12" height="10" stroke-linejoin="square"></rect> </g></svg>
                     </span>
@@ -125,25 +125,25 @@
             </div>
         </div>
 		<div class="overlay" style="height: auto;font-size: 30px;margin-top: 0px;padding-top:0px; color: yellow;"> <marquee><strong>Registration now Open!! Scrolling News!!</strong> </marquee></div>
-		<button class="btn w3-center btn-block btn-outline-danger"><h2 style="font-size: 40px;color:white;font-family: 'Rancho', cursive;"><strong>Register</strong></h2></button>
+		<button class="btn w3-center btn-block btn-outline-danger" onClick="window.location.href='login.php';"><h2 style="font-size: 40px;color:white;font-family: 'Rancho', cursive;"><strong>Register</strong></h2></button>
     </div>
 
 
 
     <div class="row">
         <div id="event" class=" row ">
-            <div role="button" id="event-pp" onclick="window.location.href='paper.html'"  style="border-radius:50%;" class="animated fadeInRightBig w3-card-8 w3-padding-tiny w3-hover-amber w3-blue col-md-3 col-sm-12">
+            <div role="button" id="event-pp" onclick="window.location.href='paper.html'" class="animated fadeInRightBig w3-card-8 w3-padding-tiny w3-hover-amber w3-blue col-md-3 col-sm-12">
                 <div class="w3-container w3-center">
                     <h3 >Paper Presentation</h3>
-                    <img src="images/paper.jpg"  style="width:80%">
+                    <img src="images/workshop.png"  style="width:80%">
                     <div>
                         <br />
                     </div>
                 </div>
             </div>
 
-            <div role="button" id="event-pp" onclick="window.location.href='poster.html'" style="border-radius:50%;" class="animated fadeInLeftBig w3-card-8 w3-padding-tiny w3-hover-amber w3-green col-md-3 col-sm-12">
-                <div class="w3-container w3-center" >
+            <div role="button" id="event-pp" onclick="window.location.href='poster.html'" class="animated fadeInLeftBig w3-card-8 w3-padding-tiny w3-hover-amber w3-green col-md-3 col-sm-12">
+                <div class="w3-container w3-center">
                     <h3>Poster Presentation</h3>
                     <img src="images/poster.jpg" style="width:80%">
                     <div>
@@ -152,7 +152,7 @@
                 </div>
             </div>
 
-            <div role="button" id="event-pp" onclick="window.location.href='app.html'" style="border-radius:50%;" class=" animated fadeInDownBig w3-card-8 w3-padding-tiny w3-hover-amber w3-red col-md-3 col-sm-12">
+            <div role="button" id="event-pp" onclick="window.location.href='app.html'" class=" animated fadeInDownBig w3-card-8 w3-padding-tiny w3-hover-amber w3-red col-md-3 col-sm-12">
                 <div class="w3-container w3-center">
                     <h3>App Development</h3>
                     <img src="images/app.jpg" alt="Avatar" style="width:80%">
@@ -164,7 +164,7 @@
 
 
 
-            <div role="button" id="event-pp" onclick="window.location.href='project.html'" style="border-radius:50%;" class="animated fadeInRightBig w3-card-8 w3-padding-tiny w3-hover-amber w3-yellow col-md-3 col-sm-12">
+            <div role="button" id="event-pp" onclick="window.location.href='project.html'" class="animated fadeInRightBig w3-card-8 w3-padding-tiny w3-hover-amber w3-yellow col-md-3 col-sm-12">
                 <div class="w3-container w3-center">
                     <h3>Project Expo</h3>
                     <img src="images/project.gif" alt="Avatar" style="width:80%">
@@ -188,7 +188,7 @@
 
             <div role="button" id="event-pp" onclick="window.location.href='wits.html'" class="animated fadeInRightBig w3-card-8 w3-padding-tiny w3-hover-amber w3-purple col-md-3 col-sm-12">
                 <div class="w3-container w3-center">
-                    <h3>Test Your WITS</h3>
+                    <h3>Test ur Wits</h3>
                     <img src="images/wits.gif" alt="Avatar" style="width:80%">
                     <div>
                         <br />
@@ -210,7 +210,7 @@
 
             <div role="button" id="event-pp" onclick="window.location.href='quiz.html'" class="animated fadeInUpBig w3-card-8 w3-padding-tiny w3-hover-amber w3-green col-md-3 col-sm-12">
                 <div class="w3-container w3-center">
-                    <h3>Quiz</h3>
+                    <h3>Technical Quiz</h3>
                     <img src="images/quiz.jpg" alt="Avatar" style="width:80%">
                     <div>
                         <br />
@@ -258,7 +258,7 @@
 
             <div role="button" id="event-pp" onclick="window.location.href='add.html'" class=" animated fadeInRightBig w3-card-8 w3-padding-tiny w3-hover-amber w3-red col-md-3 col-sm-12">
                 <div class="w3-container w3-center">
-                    <h3>Add Making</h3>
+                    <h3>Ad Making</h3>
                     <img src="images/add.gif" alt="Avatar" style="width:80%">
                     <div>
                         <br />
@@ -290,7 +290,7 @@
     </div>
 
     <script>
-        //   $("#header2").height($("#header").height());
+        // $("#header2").height($("#header").height());
            $('.tlt').textillate({ in: { effect: 'fadeInLeftBig' } });
            $('.tlt').textillate('start');
     </script>
@@ -300,6 +300,9 @@
         $("img:not(.exclude)").width(200).height(200);
         $(".exclude").width(35).height(35);
     </script>
+<div class="jumbotron" style="background:url('images/');background-repeat:no-repeat;background-size:cover;">
+
+</div>
 
 </body>
 </html>

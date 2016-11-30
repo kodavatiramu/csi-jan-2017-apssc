@@ -84,7 +84,7 @@
 			<h1> Navigation </h1>
 			<a href="#0" class="cd-close-nav">Close</a> </header>
 		<ul class="cd-nav">
-			<li data-menu="index"> <a href="index.html" onclick="window.location.href = 'index.html';"> <span>
+			<li data-menu="index"> <a href="index.php" onclick="window.location.href = 'index.php';"> <span>
       <svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64">
         <g transform="translate(0, 0)">
           <polyline data-cap="butt" fill="none" stroke="#9e85d0" stroke-width="2" stroke-miterlimit="10" points="10,24.9 10,60 26,60 26,44 38,44 38,60 54,60 54,24.9 " stroke-linejoin="square" stroke-linecap="butt"></polyline>
@@ -194,15 +194,15 @@
 
 				$db = new mysqli( 'sql202.rf.gd', 'rfgd_19176149', 'nihanth007', 'rfgd_19176149_registrations' );
 
-				$sql = 'insert into entry values("' . $_SESSION[ 'name' ] . '","' . $_SESSION[ 'pin' ] . '","' . $_SESSION[ 'email' ] . '","' . $_SESSION[ 'phone' ] . '","' . $_SESSION[ 'college' ] . '","' . $_SESSION[ 'branch' ] . '");';
-
+				$sql = 'insert into entry values("' . $_SESSION[ 'name' ] . '","' . $_SESSION[ 'pin' ] . '","' . $_SESSION[ 'email' ] . '","' . $_SESSION[ 'phone' ] . '","' . $_SESSION[ 'college' ] . '","' . $_SESSION[ 'branch' ] . '",0,0,0,0,0,0,0,0,0,0,0,0,0);';
+				
 				if ( $db->query( $sql ) ) {
 
 					echo '<h3 class="w3-text-red">You Have Been Successfully Registered</h3><br>Please Check Your E-mail for Username and Password';
 					echo '<a href="login.php">Click Here to Login and Register for Individual Events</a>';
 					$to = $_SESSION[ 'email' ];
 					$subject = "Registration Successful for ".$_SESSION['name'];
-					$html = "You have been successfully Registered.<br>Your Username is ".$_SESSION['pin']."<br>Your Password is ".$_SESSION['phone'];
+					$html = " You have been successfully Registered.\n\r Your Username is ".$_SESSION['pin']." \n\r Your Password is ".$_SESSION['phone'];
 					$headers .= "MIME-Version: 1.0" . "\r\n";
 					$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 					$headers .= "From: do-not-reply@giet-csi.ml" . "\r\n" .
@@ -213,7 +213,7 @@
 
 				} else {
 					echo 'Registration Failed.<br>Please Check if you have Entered Correct Details and Try Again';
-					echo '<br><a href="registration.html">Click Here to Login Again</a><br></hr>';
+					echo '<br><a href="registration.html">Click Here to Try Again</a><br></hr>';
 				}
 
 			}
