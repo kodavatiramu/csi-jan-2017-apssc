@@ -252,7 +252,8 @@
 					<?php echo '   ' .$_SESSION['email']; echo '<br>'; ?> Registered Phone :
 					<?php echo '   ' .$_SESSION['phone']; echo '<br>'; ?> Registered Branch :
 					<?php echo '   ' .$_SESSION['branch']; echo '<br>'; ?> Registered College :
-					<?php echo '   ' .$_SESSION['college']; echo '<br>'; ?>
+					<?php echo '   ' .$_SESSION['college']; echo '<br>'; ?>Accomodation Requested :
+					<?php echo '   ' .($_SESSION['accomodation']==1?'Yes':'No'); echo '<br>'; ?>
 				</div>
 				<hr>
 				<div class="row">
@@ -318,7 +319,7 @@
 						<div class="form-check">
 							<label class="form-check-label">
      					 <input <?php if($temp[6]==1){echo 'hidden checked';} ?> name="paper" type="checkbox" value=1 class="form-check-input">
-     					 <?php echo $event_name[7]; ?> <span><a class="w3-text-blue" target="_blank" href="paper.html">Info</a></span>
+     					 Paper Presentation <span><a class="w3-text-blue" target="_blank" href="paper.html">Info</a></span>
    						 </label>
 							<br>
 							<label class="form-check-label">

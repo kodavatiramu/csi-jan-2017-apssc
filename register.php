@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-
+<?php 
+@ob_start();
+session_start();	
+?>
 <head>
 	<title>CSI State Level Convention</title>
 	<link rel="stylesheet" href="Content/animate.min.css"/>
@@ -184,22 +187,23 @@
 			<link rel="stylesheet" href="Content/bootstrap.min.css"/>
 			<?php
 			if ( isset( $_POST[ 'name' ] ) && $_POST[ 'name' ] != null ) {
-				session_start();
+				
 				$_SESSION[ 'name' ] = $_POST[ 'name' ];
 				$_SESSION[ 'pin' ] = $_POST[ 'pin' ];
 				$_SESSION[ 'email' ] = $_POST[ 'email' ];
 				$_SESSION[ 'phone' ] = $_POST[ 'phone' ];
 				$_SESSION[ 'college' ] = $_POST[ 'college' ];
 				$_SESSION[ 'branch' ] = $_POST[ 'branch' ];
+				$_SESSION['accomodation'] = $_POST['accomodation']==1?1:0;
 
 				$db = new mysqli( 'sql202.rf.gd', 'rfgd_19176149', 'nihanth007', 'rfgd_19176149_registrations' );
 
-				$sql = 'insert into entry values("' . $_SESSION[ 'name' ] . '","' . $_SESSION[ 'pin' ] . '","' . $_SESSION[ 'email' ] . '","' . $_SESSION[ 'phone' ] . '","' . $_SESSION[ 'college' ] . '","' . $_SESSION[ 'branch' ] . '",0,0,0,0,0,0,0,0,0,0,0,0,0);';
+				$sql = 'insert into entry values("' . $_SESSION[ 'name' ] . '","' . $_SESSION[ 'pin' ] . '","' . $_SESSION[ 'email' ] . '","' . $_SESSION[ 'phone' ] . '","' . $_SESSION[ 'college' ] . '","' . $_SESSION[ 'branch' ] . '",0,0,0,0,0,0,0,0,0,0,0,0,0,'.$_SESSION['accomodation'].');';
 				
 				if ( $db->query( $sql ) ) {
 
 					echo '<h3 class="w3-text-red">You Have Been Successfully Registered</h3><br>Please Check Your E-mail for Username and Password';
-					echo '<a href="login.php">Click Here to Login and Register for Individual Events</a>';
+					echo '<br><a href="login.php">Click Here to Login and Register for Individual Events</a>';
 					$to = $_SESSION[ 'email' ];
 					$subject = "Registration Successful for ".$_SESSION['name'];
 					$html = " You have been successfully Registered.\n\r Your Username is ".$_SESSION['pin']." \n\r Your Password is ".$_SESSION['phone'];
