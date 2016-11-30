@@ -15,4 +15,5 @@
 <file name="Web.config" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131239337940000000" remote="131249289600000000" Dst="0" />
 <file name="Web.Debug.config" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131239338060000000" remote="131249289600000000" Dst="0" />
 <file name=".htaccess" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131249668800000000" remote="131249668800000000" Dst="0" />
+<file name="event_reg.php" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131249705400000000" remote="131249705400000000" Dst="0" />
 </dwsync>
