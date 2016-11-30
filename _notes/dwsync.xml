@@ -4,7 +4,7 @@
 <file name="about.html" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131249599010939298" remote="131249289600000000" Dst="0" />
 <file name="index.php" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131249834440063523" remote="131249467800000000" Dst="0" />
 <file name="register.php" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131250051894763441" remote="131249673000000000" Dst="0" />
-<file name="mypage.php" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131250045070194313" remote="131249666400000000" Dst="0" />
+<file name="mypage.php" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131250105660979881" remote="131249733000000000" Dst="0" />
 <file name="contact.html" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131249599012513575" remote="131249289600000000" Dst="0" />
 <file name="login.php" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131249599183826281" remote="131249289600000000" Dst="0" />
 <file name="kode.html" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131249599185325424" remote="131249289600000000" Dst="0" />
@@ -15,5 +15,6 @@
 <file name="Web.config" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131239337940000000" remote="131249289600000000" Dst="0" />
 <file name="Web.Debug.config" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131239338060000000" remote="131249289600000000" Dst="0" />
 <file name=".htaccess" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131249668800000000" remote="131249668800000000" Dst="0" />
-<file name="event_reg.php" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131249705400000000" remote="131249705400000000" Dst="0" />
+<file name="event_reg.php" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131250149982155532" remote="131249770800000000" Dst="0" />
+<file name="db_connect_test.php" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131250103876353243" remote="131249733000000000" Dst="0" />
 </dwsync>
