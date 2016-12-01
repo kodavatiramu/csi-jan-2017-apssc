@@ -1,5 +1,5 @@
-
-
+<!DOCTYPE html>
+<html>
 <head>
 	<title>CSI State Level Convention</title>
 	<link rel="stylesheet" href="Content/animate.min.css"/>
@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="Content/themes/base/jquery-ui.min.css"/>
 	<link rel="stylesheet" href="Content/bootstrap.min.css"/>
 	<link rel="stylesheet" href="Content/w3.css"/>
-	<link href="https://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
 	<script src="Scripts/jquery-3.1.1.min.js"></script>
 	<script src="Scripts/jquery-ui-1.12.1.min.js"></script>
 	<script src="Scripts/main.js"></script>
@@ -18,10 +18,18 @@
 	<link rel="stylesheet" href="Content/particles.css"/>
 	<link rel="stylesheet" href="Content/reset.css"/>
 	<link rel="stylesheet" href="Content/style.css"/>
-
+	<script>
+		function modal(){
+			document.getElementById("instrictions").style.display='block';
+		}
+	</script>
 	<style>
-     p,pre{color:black;}
-	 .card{background:grey;}
+		.jumbotron {
+			margin-bottom: 0px;
+			padding-bottom: 0px;
+			text-shadow: black 0.6em 0.6em 0.6em;
+			height: auto;
+		}
 		.center-div {
 			margin: 0 auto;
 			width: 100px;
@@ -40,16 +48,10 @@
 </head>
 
 <body>
-	<div style="z-index:-1;" id="particles-js"></div>
+	<div style="z-index:-1;position: fixed;" id="particles-js"></div>
 	<a href="#cd-nav" class="cd-nav-trigger">
         Menu<span></span>
     </a>
-
-
-
-
-
-
 	<nav class="cd-nav-container" id="cd-nav">
 		<header>
 			<h1> Navigation </h1>
@@ -118,8 +120,48 @@
 	</nav>
 	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 	<script src="Scripts/particles-load.js"></script>
-	<br><br><br><br><br><br>
+	<div class="row">
+		<div id="header2" style="margin-bottom: 0px; padding-bottom: 0px;" class="row">
+			<div class="col-md-3 w3-center hidden-sm-down" style="margin-bottom: 0px; padding-bottom: 0px;">
+				<img src="images/logo.png">
+			</div>
+			<div style="margin-bottom: 0px; padding-bottom: 0px;" class="col-md-6 w3-center col-sm-12">
+				<br>
+				<hr>
+				<h1 class="w3-center tlt" style="color:yellow;font-family: 'Rancho', cursive;"><strong> <b>CSI  AP State Student Convention 2017</b></strong></h1>
+				<br>
+				<h1 style="align-self: center; color: yellow;font-size: 40px;font-family: 'Rancho', cursive;" class="w3-center tlt">On 6th and 7th Jan 2017</h1>
+				<hr>
+			</div>
+			<div class="col-md-3 w3-center hidden-sm-down" style="margin-bottom: 0px; padding-bottom: 0px;">
+				<img src="images/csi-logo.png">
+			</div>
+		</div>	
+		<div class="col-lg-3 col-sm-2"></div>
+		<div id="tabs" style="background-color: white;" class="col-lg-6 col-sm-8 w3-card-4">
+		<link rel="stylesheet" href="Content/bootstrap.min.css">
+		
+			<h2 style="font-family: 'Rancho', cursive;">About CSI</h2>
+			<p>Computer Society of India is the first and largest body of computer professionals in India. It was started on 6 March 1965 by a few computer professionals and has now grown to be the national body representing computer professionals. It has 72 chapters across India, 511 student branches, and 100,000 members.The Computer Society of India is a non-profit professional meet to exchange views and information learn and share ideas. The wide spectrum of members is committed to the advancement of theory and practice of Computer Engineering and Technology Systems, Science and Engineering, Information Processing and related Arts and Sciences.The Society also encourages and assists professionals to maintain integrity and competence of the profession and fosters a sense of partnership amongst members. Besides the activities held at the Chapters and Student Branches, the Society also conducts periodic conferences, seminars.
+Through the initiatives of Professor Rangaswamy Narasimhan, the first President, CSI has been in close liaison with International Federation for Information Processing (IFIP) since its inception in 1965, when observers from India attended the IFIP Council meeting. Since 1974, when CSI became a member of IFIP, CSI has organized many IFIP sponsored events and was host to the 1978 Council meeting in Bombay and 1988 General Assembly in New Delhi. It represents India in technical committees and working groups of IFIP.</p>
 	
-    </body>
+	<br><hr>
+	<h2 style="font-family: 'Rancho', cursive;">About CSI Andhra Pradesh State Student Convention</h2>
+<p>CSI Andhra Pradesh State Student Convention (CSI APSSC) is a state level technical event organized by Department of Computer Science and Engineering, Godavari Institute of Engineering and Technology, Rajahmunsry, Andhra Pradesh. This state level convention is sponsored by Computer Society of India (CSI), India in association with CSI Student Chapter of Godavari Institute of Engineering and Technology. The aim of this convention is to bring together the young technocrats, academicians and Industry personnel to bridge the gap of industry expectations. The participants can illustrate their talents by involving with various events in the wide arena. In this CSI APSSC, various events are planned for 2 days i.e 6th & 7th January 2017.
+			</p>
+		</div>
+		<div class="col-lg-3 col-sm-2"></div>
+	</div>
+	
+	<script>
+		$( function () {
+			var tab_height = $( "#tabs" ).height();
+			var body_height = $( "body" ).height();
+			var margin = ( body_height / 2 ) - ( tab_height / 2 );
+			document.getElementById( "tabs" ).style.marginTop = margin;
+		} );
+		
+	</script>
+</body>
 
 </html>

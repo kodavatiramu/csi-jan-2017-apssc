@@ -21,6 +21,84 @@
 				$event_name[18]='Treasure Hunt';
 				$event_name[19]='Workshop on Cyber Security';
 			}
+			if($temp[6]==1){
+				$sql = 'select * from paper where pin="'.$_SESSION['pin'].'"';
+				$result = $db->query($sql);
+				$temp1 = $result->fetch_row();
+				$id[6] = 'Paper-' . $temp1[0];
+			}
+		if($temp[7]==1){
+				$sql = 'select * from poster where pin="'.$_SESSION['pin'].'"';
+				$result = $db->query($sql);
+				$temp1 = $result->fetch_row();
+				$id[7] = 'Poster-' . $temp1[0];
+			}
+		if($temp[8]==1){
+				$sql = 'select * from kode where pin="'.$_SESSION['pin'].'"';
+				$result = $db->query($sql);
+				$temp1 = $result->fetch_row();
+				$id[8] = 'Kode-' . $temp1[0];
+			}
+		if($temp[9]==1){
+				$sql = 'select * from testurwits where pin="'.$_SESSION['pin'].'"';
+				$result = $db->query($sql);
+				$temp1 = $result->fetch_row();
+				$id[9] = 'Test-' . $temp1[0];
+			}
+		if($temp[10]==1){
+				$sql = 'select * from app where pin="'.$_SESSION['pin'].'"';
+				$result = $db->query($sql);
+				$temp1 = $result->fetch_row();
+				$id[10] = 'App-' . $temp1[0];
+			}
+		if($temp[11]==1){
+				$sql = 'select * from quiz where pin="'.$_SESSION['pin'].'"';
+				$result = $db->query($sql);
+				$temp1 = $result->fetch_row();
+				$id[11] = 'Quiz-' . $temp1[0];
+			}
+		if($temp[12]==1){
+				$sql = 'select * from project where pin="'.$_SESSION['pin'].'"';
+				$result = $db->query($sql);
+				$temp1 = $result->fetch_row();
+				$id[12] = 'Project-' . $temp1[0];
+			}
+		if($temp[13]==1){
+				$sql = 'select * from startup where pin="'.$_SESSION['pin'].'"';
+				$result = $db->query($sql);
+				$temp1 = $result->fetch_row();
+				$id[13] = 'Startup-' . $temp1[0];
+			}
+		if($temp[14]==1){
+				$sql = 'select * from ad where pin="'.$_SESSION['pin'].'"';
+				$result = $db->query($sql);
+				$temp1 = $result->fetch_row();
+				$id[14] = 'Ad-' . $temp1[0];
+			}
+		if($temp[15]==1){
+				$sql = 'select * from movie where pin="'.$_SESSION['pin'].'"';
+				$result = $db->query($sql);
+				$temp1 = $result->fetch_row();
+				$id[15] = 'Movie-' . $temp1[0];
+			}
+		if($temp[16]==1){
+				$sql = 'select * from picacam where pin="'.$_SESSION['pin'].'"';
+				$result = $db->query($sql);
+				$temp1 = $result->fetch_row();
+				$id[16] = 'Pic-' . $temp1[0];
+			}
+		if($temp[17]==1){
+				$sql = 'select * from treasure where pin="'.$_SESSION['pin'].'"';
+				$result = $db->query($sql);
+				$temp1 = $result->fetch_row();
+				$id[17] = 'Treasure-' . $temp1[0];
+			}
+		if($temp[18]==1){
+				$sql = 'select * from workshop where pin="'.$_SESSION['pin'].'"';
+				$result = $db->query($sql);
+				$temp1 = $result->fetch_row();
+				$id[18] = 'Workshop-' . $temp1[0];
+			}
 		
 	}
 	else{
@@ -227,49 +305,49 @@
 						<h3>Technical Events</h3>
 						<div class="form-check">
 							<label class="form-check-label">
-     					 <input <?php if($temp[6]==1){echo ' checked';} ?> name="paper" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[6]==1){echo ' checked hidden';} ?> name="paper" type="checkbox" value=1 class="form-check-input">
      					 Paper Presentation <span><a class="w3-text-blue" target="_blank" href="paper.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[7]==1){echo ' checked';} ?> name="poster" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[7]==1){echo ' checked hidden';} ?> name="poster" type="checkbox" value=1 class="form-check-input">
      					 Poster Presentation <span><a class="w3-text-blue" target="_blank" href="poster.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[8]==1){echo ' checked';} ?> name="kode" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[8]==1){echo ' checked hidden';} ?> name="kode" type="checkbox" value=1 class="form-check-input">
      					 Kode Kraft <span><a class="w3-text-blue" target="_blank" href="kode.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[9]==1){echo ' checked';} ?> name="testurwits" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[9]==1){echo ' checked hidden';} ?> name="testurwits" type="checkbox" value=1 class="form-check-input">
      					 Test Ur Wits <span><a class="w3-text-blue" target="_blank" href="testurwits.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[11]==1){echo ' checked';} ?> name="quiz" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[11]==1){echo ' checked hidden';} ?> name="quiz" type="checkbox" value=1 class="form-check-input">
      					 Technical Quiz <span><a class="w3-text-blue" target="_blank" href="quiz.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[12]==1){echo ' checked';} ?> name="project" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[12]==1){echo ' checked hidden';} ?> name="project" type="checkbox" value=1 class="form-check-input">
      					 Project Expo <span><a class="w3-text-blue" target="_blank" href="project.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[10]==1){echo ' checked';} ?> name="app" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[10]==1){echo ' checked hidden';} ?> name="app" type="checkbox" value=1 class="form-check-input">
      					 App Development <span><a class="w3-text-blue" target="_blank" href="app.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[13]==1){echo ' checked';} ?> name="startup" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[13]==1){echo ' checked hidden';} ?> name="startup" type="checkbox" value=1 class="form-check-input">
      					 Startup Ideas <span><a class="w3-text-blue" target="_blank" href="startup.html">Info</a></span>
    						 </label>
 						
@@ -279,25 +357,25 @@
 						<h2>Fun Events</h2>
 						<div class="form-check">
 							<label class="form-check-label">
-     					 <input <?php if($temp[15]==1){echo ' checked';} ?> name="movie" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[15]==1){echo ' checked hidden';} ?> name="movie" type="checkbox" value=1 class="form-check-input">
      					 Movie Making <span><a class="w3-text-blue" target="_blank" href="movie.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[14]==1){echo ' checked';} ?> name="ad" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[14]==1){echo ' checked hidden';} ?> name="ad" type="checkbox" value=1 class="form-check-input">
      					 Ad Making <span><a class="w3-text-blue" target="_blank" href="ad.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[17]==1){echo ' checked';} ?> name="treasure" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[17]==1){echo ' checked hidden';} ?> name="treasure" type="checkbox" value=1 class="form-check-input">
      					 Treasure Hunt <span><a class="w3-text-blue" target="_blank" href="treasure.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[16]==1){echo ' checked';} ?> name="picacam" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[16]==1){echo ' checked hidden';} ?> name="picacam" type="checkbox" value=1 class="form-check-input">
      					 Pic A Cam <span><a class="w3-text-blue" target="_blank" href="picacam.html">Info</a></span>
    						 </label>
 						
@@ -307,7 +385,7 @@
 						<h2>Workshop</h2>
 						<div class="form-check">
 							<label class="form-check-label">
-     					 <input <?php if($temp[18]==1){echo ' checked';} ?> name="workshop" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[18]==1){echo ' checked hidden';} ?> name="workshop" type="checkbox" value=1 class="form-check-input">
      					 Hands On Cyber-Security <span><a class="w3-text-blue" target="_blank" href="workshop.html">Info</a></span>
    						 </label>
 						
@@ -336,6 +414,7 @@
 						<thead>
 							<tr>
 								<td>Event </td>
+								<td>ID</td>
 							</tr>
 						</thead>
 						<tbody>
@@ -344,7 +423,7 @@
 					{
 						if($temp[$i]==1)
 						{
-							echo '<tr><td>'.$event_name[$i+1].'</td></tr>';
+							echo '<tr><td>'.$event_name[$i+1].'</td><td>'.$id[$i].'</td></tr>';
 						}
 					}
 				?>
