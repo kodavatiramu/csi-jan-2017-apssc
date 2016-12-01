@@ -79,7 +79,7 @@
 <file name="style1.css" server="ftp.rf.gd//giet-csi.ml/htdocs/" local="131241991940000000" remote="131242338600000000" Dst="0" />
 <file name="w3.css" server="ftp.rf.gd//giet-csi.ml/htdocs/" local="131240140480000000" remote="131242339200000000" Dst="0" />
 <file name="animate.css" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131239344260000000" remote="131249287800000000" Dst="0" />
-<file name="animate.min.css" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131239344260000000" remote="131249287800000000" Dst="0" />
+<file name="animate.min.css" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131239344260000000" remote="131250077400000000" Dst="0" />
 <file name="bootstrap-flex.css" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131239343060000000" remote="131249287800000000" Dst="0" />
 <file name="bootstrap-flex.css.map" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131239343060000000" remote="131249287800000000" Dst="0" />
 <file name="bootstrap-flex.min.css.map" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131239343060000000" remote="131249287800000000" Dst="0" />
@@ -98,7 +98,7 @@
 <file name="bootstrap.min.css" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131239343060000000" remote="131249288400000000" Dst="0" />
 <file name="font-awesome.css" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131239345640000000" remote="131249288400000000" Dst="0" />
 <file name="navbar.css" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131241966890000000" remote="131249288400000000" Dst="0" />
-<file name="font-awesome.min.css" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131239345640000000" remote="131249288400000000" Dst="0" />
+<file name="font-awesome.min.css" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131239345640000000" remote="131250077400000000" Dst="0" />
 <file name="particles.css" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="131242233643211318" remote="131249288400000000" Dst="0" />
 <file name="reset.css" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="130451219080000000" remote="131249288400000000" Dst="0" />
 <file name="style.css" server="ftp.rf.gd/giet-csi.ml/htdocs/" local="130731199800000000" remote="131249288400000000" Dst="0" />

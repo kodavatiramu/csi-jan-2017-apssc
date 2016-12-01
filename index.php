@@ -192,7 +192,7 @@ session_destroy();
 			<div role="button" id="event-pp" onclick="window.location.href='quiz.html'" class="animated fadeInUpBig w3-card-8 w3-padding-tiny w3-hover-amber w3-green col-md-3 col-sm-12">
 				<div class="w3-container w3-center">
 					<h3>Technical Quiz</h3>
-					<img src="images/quiz.jpg" alt="Avatar" style="width:80%">
+					<img src="images/quiz1.jpg" alt="Avatar" style="width:80%">
 					<div>
 						<br/>
 					</div>
