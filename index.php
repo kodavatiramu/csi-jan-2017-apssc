@@ -155,7 +155,7 @@ session_destroy();
 			</div>
 		</div>
 		<div class="overlay" style="height: auto;font-size: 30px;margin-top: 0px;padding-top:0px; color: yellow;">
-			<marquee><strong>Registration now Open!! Scrolling News!!</strong> </marquee>
+			<marquee><strong>Registration now Open!!</strong> </marquee>
 		</div>
 		<button class="btn w3-center btn-block btn-outline-danger" onClick="window.location.href='login.php';"><h2 style="font-size: 40px;color:white;font-family: 'Rancho', cursive;"><strong>Register</strong></h2></button>
 	</div>
@@ -308,7 +308,7 @@ session_destroy();
 
 
 
-			<div role="button" id="event-pp" onclick="window.location.href='add.html'" class=" animated fadeInRightBig w3-card-8 w3-padding-tiny w3-hover-amber w3-red col-md-3 col-sm-12">
+			<div role="button" id="event-pp" onclick="window.location.href='ad.html'" class=" animated fadeInRightBig w3-card-8 w3-padding-tiny w3-hover-amber w3-red col-md-3 col-sm-12">
 				<div class="w3-container w3-center">
 					<h3>Ad Making</h3>
 					<img src="images/add.gif" alt="Avatar" style="width:80%">
