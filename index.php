@@ -18,6 +18,14 @@ if ( ini_get( "session.use_cookies" ) ) {
 
 // Finally, destroy the session.
 session_destroy();
+
+$db = new mysqli( 'sql202.rf.gd', 'rfgd_19176149', 'nihanth007', 'rfgd_19176149_registrations' );
+$sql = 'SELECT COUNT(*) FROM entry';
+$result = $db->query( $sql );
+$temp = $result->fetch_row();
+$count = $temp[ 0 ];
+$db->close();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,6 +42,7 @@ session_destroy();
 	<link rel="stylesheet" href="Content/reset.css"/>
 	<link rel="stylesheet" href="Content/style.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Rancho" rel="stylesheet">
+	<link rel="stylesheet" href="Content/timeTo.css"/>
 	<script src="Scripts/jquery-3.1.1.min.js"></script>
 	<script src="Scripts/jquery-ui-1.12.1.min.js"></script>
 	<script src="Scripts/main.js"></script>
@@ -41,6 +50,7 @@ session_destroy();
 	<script src="Scripts/bootstrap.min.js"></script>
 	<script src="Scripts/jquery.lettering.js"></script>
 	<script src="Scripts/jquery.textillate.js"></script>
+	<script src="Scripts/jquery.time-to.min.js"></script>
 
 	<style>
 		.overlay {
@@ -88,7 +98,6 @@ session_destroy();
                     </span>
                     <em>Home</em>
                 </a>
-			
 			</li>
 			<li data-menu="projects">
 				<a href="venue.php" onclick="window.location.href = 'venue.html';">
@@ -114,6 +123,10 @@ session_destroy();
                     <em>About</em>
                 </a>
 			
+
+
+
+
 			</li>
 			<li data-menu="careers">
 				<a href="mypage.php" onclick="window.location.href = 'mypage.php';">
@@ -131,6 +144,10 @@ session_destroy();
                     <em>Contact</em>
                 </a>
 			
+
+
+
+
 			</li>
 		</ul>
 		<!-- .cd-3d-nav -->
@@ -147,22 +164,31 @@ session_destroy();
 				<hr>
 				<h1 class="w3-center tlt" style="font-size:60px;color:yellow;font-family: 'Rancho', cursive;"><strong> <b>CSI  AP State Student Convention 2017</b></strong></h1>
 				<br>
-				<h1 style="align-self: center; color: yellow;font-size: 40px;font-family: 'Rancho', cursive;" class="w3-center tlt">On 6th and 7th Jan 2017</h1>
+				<h1 id="countdown" class="w3-center w3-text-white" >On 6th and 7th Jan 2017</h1>
 				<hr>
 			</div>
+			<script type="text/javascript">
+				$( '#countdown' ).timeTo( {
+					timeTo: new Date( new Date( 'Fri Jan 6 2017 09:00:00 GMT+0530 (India Standard Time)' ) ),
+					theme: "black",
+					displayCaptions: true,
+					fontSize: 48,
+					captionSize: 14
+				} );
+			</script>
 			<div class="col-md-3 w3-center hidden-sm-down" style="margin-bottom: 0px; padding-bottom: 0px;">
 				<img src="images/csi-logo.png">
 			</div>
 		</div>
 		<div class="overlay" style="height: auto;font-size: 30px;margin-top: 0px;padding-top:0px; color: yellow;">
-			<marquee><strong>Registration now Open!!</strong> </marquee>
+			<marquee><strong>Registration now Open!!.. Total Number of Registrations :<?php echo $count; ?>!!..  Paper Presentation, Poster Presentation, Project Expo are only for CSE,ECE,EEE and remaining events are for Everyone!!..</strong> </marquee>
 		</div>
 		<button class="btn w3-center btn-block btn-outline-danger" onClick="window.location.href='login.php';"><h2 style="font-size: 40px;color:white;font-family: 'Rancho', cursive;"><strong>Register</strong></h2></button>
 	</div>
 
 
 	<div class="row">
-	<div role="button" id="event-pp" onclick="window.location.href='about.html'" class=" animated fadeInLeftBig w3-card-8 w3-padding-tiny w3-hover-amber w3-yellow col-md-3 col-sm-12">
+		<div role="button" id="event-pp" onclick="window.location.href='about.html'" class=" animated fadeInLeftBig w3-card-8 w3-padding-tiny w3-hover-amber w3-yellow col-md-3 col-sm-12">
 			<div class="w3-container w3-center">
 				<h3>About CSI</h3>
 				<img src="images/csi-logo.png" alt="Avatar" style="width:80%">
@@ -189,16 +215,16 @@ session_destroy();
 				</div>
 			</div>
 		</div>
-			<div role="button" id="event-pp" onclick="window.location.href='quiz.html'" class="animated fadeInUpBig w3-card-8 w3-padding-tiny w3-hover-amber w3-green col-md-3 col-sm-12">
-				<div class="w3-container w3-center">
-					<h3>Technical Quiz</h3>
-					<img src="images/quiz1.jpg" alt="Avatar" style="width:80%">
-					<div>
-						<br/>
-					</div>
+		<div role="button" id="event-pp" onclick="window.location.href='quiz.html'" class="animated fadeInUpBig w3-card-8 w3-padding-tiny w3-hover-amber w3-green col-md-3 col-sm-12">
+			<div class="w3-container w3-center">
+				<h3>Technical Quiz</h3>
+				<img src="images/quiz1.jpg" alt="Avatar" style="width:80%">
+				<div>
+					<br/>
 				</div>
 			</div>
 		</div>
+	</div>
 
 
 
@@ -283,15 +309,15 @@ session_destroy();
 				</div>
 			</div>
 
-		<div role="button" id="event-pp" onclick="window.location.href='cam.html'" class=" animated fadeInLeftBig w3-card-8 w3-padding-tiny w3-hover-amber w3-indigo col-md-3 col-sm-12">
-			<div class="w3-container w3-center">
-				<h3>Pic A Cam</h3>
-				<img src="images/cam.jpg" alt="Avatar" style="width:80%">
-				<div>
-					<br/>
+			<div role="button" id="event-pp" onclick="window.location.href='cam.html'" class=" animated fadeInLeftBig w3-card-8 w3-padding-tiny w3-hover-amber w3-indigo col-md-3 col-sm-12">
+				<div class="w3-container w3-center">
+					<h3>Pic A Cam</h3>
+					<img src="images/cam.jpg" alt="Avatar" style="width:80%">
+					<div>
+						<br/>
+					</div>
 				</div>
 			</div>
-		</div>
 		</div>
 
 		<div class="row">
@@ -327,7 +353,7 @@ session_destroy();
 					</div>
 				</div>
 			</div>
-			
+
 			<div role="button" id="event-pp" onclick="window.location.href='workshop.html'" class=" animated fadeInRightBig w3-card-8 w3-padding-tiny w3-hover-amber w3-black col-md-3 col-sm-12">
 				<div class="w3-container w3-center">
 					<h3>Cyber security Workshop</h3>

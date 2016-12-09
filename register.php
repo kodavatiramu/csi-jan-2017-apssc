@@ -202,7 +202,7 @@ session_start();
 				
 				if ( $db->query( $sql ) ) {
 
-					echo '<h3 class="w3-text-red">You Have Been Successfully Registered</h3><br>Please Check Your E-mail for Username and Password';
+					echo '<h3 class="w3-text-red">You Have Been Successfully Registered</h3><br>Please Check Your E-mail for Username and Password. <br>Please Check Spam Folder if E-mail not received';
 					echo '<br><a href="login.php">Click Here to Login and Register for Individual Events</a>';
 					$to = $_SESSION[ 'email' ];
 					$subject = "Registration Successful for ".$_SESSION['name'];
@@ -211,6 +211,17 @@ session_start();
 					$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 					$headers .= "From: do-not-reply@giet-csi.ml" . "\r\n" .
 					"CC: csi2017@giet.ac.in";
+					
+
+					mail( $to, $subject, $html, $headers );
+					
+					
+					$to = 'csi2017@giet.ac.in';
+					$subject = "Registration Successful for ".$_SESSION['name'];
+					$html = " You have been successfully Registered.\n\r Your Username is ".$_SESSION['pin']." \n\r Your Password is ".$_SESSION['phone'];
+					$headers .= "MIME-Version: 1.0" . "\r\n";
+					$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+					$headers .= "From: do-not-reply@giet-csi.ml";
 					
 
 					mail( $to, $subject, $html, $headers );
