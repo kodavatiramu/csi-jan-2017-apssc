@@ -4,6 +4,7 @@
 @ob_start();
 session_start();	
 ?>
+
 <head>
 	<title>CSI State Level Convention</title>
 	<link rel="stylesheet" href="Content/animate.min.css"/>
@@ -97,6 +98,7 @@ session_start();
       </svg>
       </span> <em>Home</em> </a>
 			
+
 			</li>
 			<li data-menu="projects"> <a href="venue.php" onclick="window.location.href = 'venue.html';"> <span>
       <svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64">
@@ -112,6 +114,7 @@ session_start();
       </svg>
       </span> <em>Event Venues and Timings</em> </a>
 			
+
 			</li>
 			<li class="cd-selected" data-menu="about"> <a href="login.php" onclick="window.location.href = 'login.php';"> <span>
       <svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64">
@@ -127,6 +130,7 @@ session_start();
       </svg>
       </span> <em>Login</em> </a>
 			
+
 			</li>
 			<li data-menu="services"> <a href="about.html" onclick="window.location.href = 'about.html';"> <span>
       <svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64">
@@ -145,6 +149,7 @@ session_start();
       </svg>
       </span> <em>About</em> </a>
 			
+
 			</li>
 			<li data-menu="careers"> <a href="mypage.php" onclick="window.location.href = 'mypage.php';"> <span>
       <svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64">
@@ -160,6 +165,7 @@ session_start();
       </svg>
       </span> <em>My Registered Events</em> </a>
 			
+
 			</li>
 			<li data-menu="contact"> <a href="contact.html" onclick="window.location.href = 'contact.html';"> <span>
       <svg class="nc-icon outline" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64">
@@ -172,6 +178,7 @@ session_start();
       </svg>
       </span> <em>Contact</em> </a>
 			
+
 			</li>
 		</ul>
 		<!-- .cd-3d-nav -->
@@ -187,44 +194,60 @@ session_start();
 			<link rel="stylesheet" href="Content/bootstrap.min.css"/>
 			<?php
 			if ( isset( $_POST[ 'name' ] ) && $_POST[ 'name' ] != null ) {
-				
+
 				$_SESSION[ 'name' ] = $_POST[ 'name' ];
 				$_SESSION[ 'pin' ] = $_POST[ 'pin' ];
 				$_SESSION[ 'email' ] = $_POST[ 'email' ];
 				$_SESSION[ 'phone' ] = $_POST[ 'phone' ];
 				$_SESSION[ 'college' ] = $_POST[ 'college' ];
 				$_SESSION[ 'branch' ] = $_POST[ 'branch' ];
-				$_SESSION['accomodation'] = $_POST['accomodation']==1?1:0;
+				$_SESSION[ 'accomodation' ] = $_POST[ 'accomodation' ] == 1 ? 1 : 0;
 
 				$db = new mysqli( 'sql202.rf.gd', 'rfgd_19176149', 'nihanth007', 'rfgd_19176149_registrations' );
 
-				$sql = 'insert into entry values("' . $_SESSION[ 'name' ] . '","' . $_SESSION[ 'pin' ] . '","' . $_SESSION[ 'email' ] . '","' . $_SESSION[ 'phone' ] . '","' . $_SESSION[ 'college' ] . '","' . $_SESSION[ 'branch' ] . '",0,0,0,0,0,0,0,0,0,0,0,0,0,'.$_SESSION['accomodation'].');';
-				
+				$sql = 'insert into entry values("' . $_SESSION[ 'name' ] . '","' . $_SESSION[ 'pin' ] . '","' . $_SESSION[ 'email' ] . '","' . $_SESSION[ 'phone' ] . '","' . $_SESSION[ 'college' ] . '","' . $_SESSION[ 'branch' ] . '",0,0,0,0,0,0,0,0,0,0,0,0,0,' . $_SESSION[ 'accomodation' ] . ');';
+
 				if ( $db->query( $sql ) ) {
 
 					echo '<h3 class="w3-text-red">You Have Been Successfully Registered</h3><br>Please Check Your E-mail for Username and Password. <br>Please Check Spam Folder if E-mail not received';
 					echo '<br><a href="login.php">Click Here to Login and Register for Individual Events</a>';
-					$to = $_SESSION[ 'email' ];
 					$subject = "Registration Successful for ".$_SESSION['name'];
 					$html = " You have been successfully Registered.\n\r Your Username is ".$_SESSION['pin']." \n\r Your Password is ".$_SESSION['phone'];
-					$headers .= "MIME-Version: 1.0" . "\r\n";
-					$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-					$headers .= "From: do-not-reply@giet-csi.ml" . "\r\n" .
-					"CC: csi2017@giet.ac.in";
-					
+					require 'phpmailer/PHPMailerAutoload.php';
 
-					mail( $to, $subject, $html, $headers );
-					
-					
-					$to = 'csi2017@giet.ac.in';
-					$subject = "Registration Successful for ".$_SESSION['name'];
-					$html = " You have been successfully Registered.\n\r Your Username is ".$_SESSION['pin']." \n\r Your Password is ".$_SESSION['phone'];
-					$headers .= "MIME-Version: 1.0" . "\r\n";
-					$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-					$headers .= "From: do-not-reply@giet-csi.ml";
-					
+					$mail = new PHPMailer;
 
-					mail( $to, $subject, $html, $headers );
+					//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+					$mail->isSMTP(); // Set mailer to use SMTP
+					$mail->Host = 'smtp.gmail.com'; // Specify main and backup SMTP servers
+					$mail->SMTPAuth = true; // Enable SMTP authentication
+					$mail->Username = 'csi2017@giet.ac.in'; // SMTP username
+					$mail->Password = 'csi20172017'; // SMTP password
+					$mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
+					$mail->Port = 587; // TCP port to connect to
+
+					$mail->setFrom( 'csi2017@giet.ac.in', 'CSI APSSC 2017' );
+					$mail->addAddress( $_SESSION[ 'email' ], $_SESSION[ 'name' ] ); // Add a recipient
+					//$mail->addAddress('ellen@example.com');               // Name is optional
+					//$mail->addReplyTo( 'info@example.com', 'Information' );
+					//$mail->addCC('cc@example.com');
+					//$mail->addBCC('bcc@example.com');
+
+					//$mail->addAttachment( '/var/tmp/file.tar.gz' ); // Add attachments
+					//$mail->addAttachment( '/tmp/image.jpg', 'new.jpg' ); // Optional name
+					$mail->isHTML( true ); // Set email format to HTML
+
+					$mail->Subject = $subject;
+					$mail->Body = $html;
+					$mail->AltBody = $html;
+
+					if ( !$mail->send() ) {
+						echo 'Message could not be sent.';
+						echo 'Mailer Error: ' . $mail->ErrorInfo;
+					} else {
+						echo '';
+					}
 
 				} else {
 					echo 'Registration Failed.<br>Please Check if you have Entered Correct Details and Try Again';
