@@ -224,8 +224,8 @@ session_start();
 					$mail->SMTPAuth = true; // Enable SMTP authentication
 					$mail->Username = 'csi2017@giet.ac.in'; // SMTP username
 					$mail->Password = 'csi20172017'; // SMTP password
-					$mail->SMTPSecure = 'tls'; // Enable TLS encryption, `ssl` also accepted
-					$mail->Port = 587; // TCP port to connect to
+					$mail->SMTPSecure = false; // Enable TLS encryption, `ssl` also accepted
+					$mail->Port = 25; // TCP port to connect to
 
 					$mail->setFrom( 'csi2017@giet.ac.in', 'CSI APSSC 2017' );
 					$mail->addAddress( $_SESSION[ 'email' ], $_SESSION[ 'name' ] ); // Add a recipient
