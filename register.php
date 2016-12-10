@@ -252,6 +252,7 @@ session_start();
 				} else {
 					echo 'Registration Failed.<br>Please Check if you have Entered Correct Details and Try Again';
 					echo '<br><a href="registration.html">Click Here to Try Again</a><br></hr>';
+					echo '<script>console.log("'.$sql.'")';
 				}
 
 			}
