@@ -211,6 +211,7 @@ session_start();
 
 					echo '<h3 class="w3-text-red">You Have Been Successfully Registered</h3><br>Your Username is :'.$_SESSION['pin'].'  and Password : '.$_SESSION['phone'];
 					echo '<br><a href="login.php">Click Here to Login and Register for Individual Events</a>';
+					echo '<br>For any queries please mail to csi2017@giet.ac.in';
 					
 					
 				} else {
