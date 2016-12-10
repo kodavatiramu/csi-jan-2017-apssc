@@ -209,46 +209,10 @@ session_start();
 
 				if ( $db->query( $sql ) ) {
 
-					echo '<h3 class="w3-text-red">You Have Been Successfully Registered</h3><br>Please Check Your E-mail for Username and Password. <br>Please Check Spam Folder if E-mail not received';
+					echo '<h3 class="w3-text-red">You Have Been Successfully Registered</h3><br>Your Username is :'.$_SESSION['pin'].'  and Password : '.$_SESSION['phone'];
 					echo '<br><a href="login.php">Click Here to Login and Register for Individual Events</a>';
-					$subject = "Registration Successful for ".$_SESSION['name'];
-					$html = " You have been successfully Registered.\n\r Your Username is ".$_SESSION['pin']." \n\r Your Password is ".$_SESSION['phone'];
-					require 'phpmailer/PHPMailerAutoload.php';
-
-					$mail = new PHPMailer;
-
-					//$mail->SMTPDebug = 3;                               // Enable verbose debug output
-
-					$mail->isSMTP(); // Set mailer to use SMTP
-					$mail->Host = 'smtp.gmail.com'; // Specify main and backup SMTP servers
-					$mail->SMTPAuth = true; // Enable SMTP authentication
-					$mail->Username = 'csi2017@giet.ac.in'; // SMTP username
-					$mail->Password = 'csi20172017'; // SMTP password
-					$mail->SMTPSecure = false; // Enable TLS encryption, `ssl` also accepted
-					$mail->Port = 25; // TCP port to connect to
-
-					$mail->setFrom( 'csi2017@giet.ac.in', 'CSI APSSC 2017' );
-					$mail->addAddress( $_SESSION[ 'email' ], $_SESSION[ 'name' ] ); // Add a recipient
-					//$mail->addAddress('ellen@example.com');               // Name is optional
-					//$mail->addReplyTo( 'info@example.com', 'Information' );
-					//$mail->addCC('cc@example.com');
-					//$mail->addBCC('bcc@example.com');
-
-					//$mail->addAttachment( '/var/tmp/file.tar.gz' ); // Add attachments
-					//$mail->addAttachment( '/tmp/image.jpg', 'new.jpg' ); // Optional name
-					$mail->isHTML( true ); // Set email format to HTML
-
-					$mail->Subject = $subject;
-					$mail->Body = $html;
-					$mail->AltBody = $html;
-
-					if ( !$mail->send() ) {
-						echo 'Message could not be sent.';
-						echo 'Mailer Error: ' . $mail->ErrorInfo;
-					} else {
-						echo '';
-					}
-
+					
+					
 				} else {
 					echo 'Registration Failed.<br>Please Check if you have Entered Correct Details and Try Again';
 					echo '<br><a href="registration.html">Click Here to Try Again</a><br></hr>';
