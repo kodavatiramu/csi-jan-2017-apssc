@@ -321,7 +321,7 @@ $db->close();
 		</div>
 
 		<div class="row">
-			<div role="button" id="event-pp" onclick="window.location.href='ideas.html'" class=" animated fadeInDownBig w3-card-8 w3-padding-tiny w3-hover-amber w3-orange col-md-3 col-sm-12">
+			<div role="button" id="event-pp" onclick="window.location.href='startup.html'" class=" animated fadeInDownBig w3-card-8 w3-padding-tiny w3-hover-amber w3-orange col-md-3 col-sm-12">
 				<div class="w3-container w3-center">
 					<h3>Start Up Ideas</h3>
 					<img src="images/idea.png" alt="Avatar" style="width:80%">
