@@ -19,12 +19,12 @@ if ( ini_get( "session.use_cookies" ) ) {
 // Finally, destroy the session.
 session_destroy();
 
-$db = new mysqli( 'sql202.rf.gd', 'rfgd_19176149', 'nihanth007', 'rfgd_19176149_registrations' );
-$sql = 'SELECT COUNT(*) FROM entry';
-$result = $db->query( $sql );
-$temp = $result->fetch_row();
-$count = $temp[ 0 ];
-$db->close();
+//$db = new mysqli( 'sql202.rf.gd', 'rfgd_19176149', 'nihanth007', 'rfgd_19176149_registrations' );
+//$sql = 'SELECT COUNT(*) FROM entry';
+//$result = $db->query( $sql );
+//$temp = $result->fetch_row();
+//$count = $temp[ 0 ];
+//$db->close();
 
 ?>
 <!DOCTYPE html>
@@ -181,7 +181,7 @@ $db->close();
 			</div>
 		</div>
 		<div class="overlay" style="height: auto;font-size: 30px;margin-top: 0px;padding-top:0px; color: yellow;">
-			<marquee><strong>Registration now Open!!.. Total Number of Registrations :<?php echo $count; ?>!!..  Paper Presentation, Poster Presentation, Project Expo are only for CSE,ECE,EEE and remaining events are for Everyone!!..</strong> </marquee>
+			<marquee><strong>Registration now Open!!..  Paper Presentation, Poster Presentation, Project Expo are only for CSE,ECE,EEE and remaining events are for Everyone!!..</strong> </marquee>
 		</div>
 		<button class="btn w3-center btn-block btn-outline-danger" onClick="window.location.href='login.php';"><h2 style="font-size: 40px;color:white;font-family: 'Rancho', cursive;"><strong>Register</strong></h2></button>
 	</div>
