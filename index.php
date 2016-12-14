@@ -287,7 +287,7 @@ session_destroy();
 				</div>
 			</div>
 
-			<div role="button" id="event-pp" onclick="window.location.href='wits.html'" class="animated fadeInRightBig w3-card-8 w3-padding-tiny w3-hover-amber w3-purple col-md-3 col-sm-12">
+			<div role="button" id="event-pp" onclick="window.location.href='testurwits.html'" class="animated fadeInRightBig w3-card-8 w3-padding-tiny w3-hover-amber w3-purple col-md-3 col-sm-12">
 				<div class="w3-container w3-center">
 					<h3>Test ur Wits</h3>
 					<img src="images/wits.gif" alt="Avatar" style="width:80%">
