@@ -188,7 +188,7 @@ session_destroy();
 
 
 	<div class="row">
-		<div role="button" id="event-pp" onclick="window.location.href='about/'" class=" animated fadeInLeftBig w3-card-8 w3-padding-tiny w3-hover-amber w3-yellow col-md-3 col-sm-12">
+		<div role="button" id="event-pp" onclick="window.location.href='about.html'" class=" animated fadeInLeftBig w3-card-8 w3-padding-tiny w3-hover-amber w3-yellow col-md-3 col-sm-12">
 			<div class="w3-container w3-center">
 				<h3>About CSI</h3>
 				<img src="images/csi-logo.png" alt="Avatar" style="width:80%">
@@ -197,7 +197,7 @@ session_destroy();
 				</div>
 			</div>
 		</div>
-		<div role="button" id="event-pp" onclick="window.location.href='http://giet.ac.in/about.html'" class=" animated fadeInLeftBig w3-card-8 w3-padding-tiny w3-hover-amber w3-purple col-md-3 col-sm-12">
+		<div role="button" id="event-pp" onclick="window.location.href='about/'" class=" animated fadeInLeftBig w3-card-8 w3-padding-tiny w3-hover-amber w3-purple col-md-3 col-sm-12">
 			<div class="w3-container w3-center">
 				<h3>About GIET</h3>
 				<img src="images/logo.png" alt="Avatar" style="width:80%">
