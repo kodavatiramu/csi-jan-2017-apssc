@@ -253,7 +253,7 @@
 					<div role="button" class="w3-card-4 col-md-6 col-sm-6 btn btn-success" data-toggle="modal" data-target="#register">Register</div>
 				</div>
 				<hr>
-				<button class="row btn btn-danger btn-block" onclick="window.location.href='index.php'">Logout</button>
+				<button class="row container btn btn-danger btn-block" onclick="window.location.href='index.php'">Logout</button>
 
 			</div>
 		</div>
