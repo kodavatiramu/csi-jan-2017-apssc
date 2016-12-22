@@ -254,6 +254,7 @@
 				</div>
 				<hr>
 				<button class="row container btn btn-danger btn-block" onclick="window.location.href='index.php'">Logout</button>
+				<hr>
 
 			</div>
 		</div>
