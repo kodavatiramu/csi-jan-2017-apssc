@@ -298,6 +298,7 @@
 											<td><i class="fa fa-inr" aria-hidden="true">100</i>
 											</td>
 										</tr>
+										<tr><td> Please do not Register for the Events below if you have already done this before. </td></tr>
 									</tbody>
 								</table>
 							</li>
