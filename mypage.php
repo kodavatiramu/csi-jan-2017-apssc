@@ -307,49 +307,49 @@
 						<h3>Technical Events</h3>
 						<div class="form-check">
 							<label class="form-check-label">
-     					 <input <?php if($temp[6]==1){echo ' checked hidden';} ?> name="paper" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[6]==1){echo '';} ?> name="paper" type="checkbox" value=1 class="form-check-input">
      					 Paper Presentation <span><a class="w3-text-blue" target="_blank" href="paper.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[7]==1){echo ' checked hidden';} ?> name="poster" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[7]==1){echo '';} ?> name="poster" type="checkbox" value=1 class="form-check-input">
      					 Poster Presentation <span><a class="w3-text-blue" target="_blank" href="poster.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[8]==1){echo ' checked hidden';} ?> name="kode" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[8]==1){echo '';} ?> name="kode" type="checkbox" value=1 class="form-check-input">
      					 Kode Kraft <span><a class="w3-text-blue" target="_blank" href="kode.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[9]==1){echo ' checked hidden';} ?> name="testurwits" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[9]==1){echo '';} ?> name="testurwits" type="checkbox" value=1 class="form-check-input">
      					 Test Ur Wits <span><a class="w3-text-blue" target="_blank" href="testurwits.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[11]==1){echo ' checked hidden';} ?> name="quiz" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[11]==1){echo '';} ?> name="quiz" type="checkbox" value=1 class="form-check-input">
      					 Technical Quiz <span><a class="w3-text-blue" target="_blank" href="quiz.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[12]==1){echo ' checked hidden';} ?> name="project" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[12]==1){echo '';} ?> name="project" type="checkbox" value=1 class="form-check-input">
      					 Project Expo <span><a class="w3-text-blue" target="_blank" href="project.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[10]==1){echo ' checked hidden';} ?> name="app" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[10]==1){echo '';} ?> name="app" type="checkbox" value=1 class="form-check-input">
      					 App Development <span><a class="w3-text-blue" target="_blank" href="app.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[13]==1){echo ' checked hidden';} ?> name="startup" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[13]==1){echo '';} ?> name="startup" type="checkbox" value=1 class="form-check-input">
      					 Startup Ideas <span><a class="w3-text-blue" target="_blank" href="startup.html">Info</a></span>
    						 </label>
 						
@@ -359,25 +359,25 @@
 						<h2>Fun Events</h2>
 						<div class="form-check">
 							<label class="form-check-label">
-     					 <input <?php if($temp[15]==1){echo ' checked hidden';} ?> name="movie" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[15]==1){echo '';} ?> name="movie" type="checkbox" value=1 class="form-check-input">
      					 Movie Making <span><a class="w3-text-blue" target="_blank" href="movie.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[14]==1){echo ' checked hidden';} ?> name="ad" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[14]==1){echo '';} ?> name="ad" type="checkbox" value=1 class="form-check-input">
      					 Ad Making <span><a class="w3-text-blue" target="_blank" href="ad.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[17]==1){echo ' checked hidden';} ?> name="treasure" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[17]==1){echo '';} ?> name="treasure" type="checkbox" value=1 class="form-check-input">
      					 Treasure Hunt <span><a class="w3-text-blue" target="_blank" href="treasure.html">Info</a></span>
    						 </label>
 						
 							<br>
 							<label class="form-check-label">
-     					 <input <?php if($temp[16]==1){echo ' checked hidden';} ?> name="picacam" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[16]==1){echo '';} ?> name="picacam" type="checkbox" value=1 class="form-check-input">
      					 Pic A Cam <span><a class="w3-text-blue" target="_blank" href="picacam.html">Info</a></span>
    						 </label>
 						
@@ -387,7 +387,7 @@
 						<h2>Workshop</h2>
 						<div class="form-check">
 							<label class="form-check-label">
-     					 <input <?php if($temp[18]==1){echo ' checked hidden';} ?> name="workshop" type="checkbox" value=1 class="form-check-input">
+     					 <input <?php if($temp[18]==1){echo '';} ?> name="workshop" type="checkbox" value=1 class="form-check-input">
      					 Hands On Cyber-Security <span><a class="w3-text-blue" target="_blank" href="workshop.html">Info</a></span>
    						 </label>
 						
